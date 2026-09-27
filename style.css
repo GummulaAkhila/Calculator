@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2,
+        #2b1055
+    );
+}
+
+/* Calculator */
+
+.calculator {
+    width: 360px;
+    padding: 25px;
+
+    border-radius: 30px;
+
+    background: rgba(20, 20, 35, 0.9);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(15px);
+}
+
+/* Top */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.top h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.top span {
+    color: #aaa;
+    font-size: 11px;
+}
+
+/* Display */
+
+.display {
+    height: 130px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+#expression {
+    width: 100%;
+
+    text-align: right;
+
+    color: #999;
+
+    font-size: 16px;
+
+    min-height: 25px;
+
+    word-wrap: break-word;
+}
+
+#result {
+    width: 100%;
+
+    text-align: right;
+
+    color: white;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+
+    word-wrap: break-word;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+
+    border: none;
+
+    border-radius: 17px;
+
+    background: #292a3d;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+/* Hover */
+
+button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.2);
+}
+
+/* Click */
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* Action buttons */
+
+.action {
+    background: #37384d;
+    color: #d5d5e5;
+}
+
+/* Operators */
+
+.operator {
+    background: #45466a;
+    color: #dfe0ff;
+}
+
+/* Equal */
+
+.equals {
+    background: linear-gradient(
+        135deg,
+        #7778ff,
+        #9b5cff
+    );
+
+    color: white;
+}
+
+/* Zero */
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Responsive */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 92%;
+        padding: 18px;
+    }
+
+    button {
+        height: 55px;
+    }
+
+    #result {
+        font-size: 34px;
+    }
+}
